@@ -1,8 +1,9 @@
 import { DivStart } from "./style";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Toast } from "../../utils/toast";
-const StartPage = ({ setInApp }) => {
+import { useContext } from "react";
+import { UserContext } from "../../context";
+const StartPage = () => {
+  const { setInApp } = useContext(UserContext);
   return (
     <DivStart>
       <button
@@ -19,7 +20,6 @@ const StartPage = ({ setInApp }) => {
         <span></span>
         Enter
       </button>
-      <ToastContainer />
     </DivStart>
   );
 };

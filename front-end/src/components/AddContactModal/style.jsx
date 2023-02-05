@@ -99,7 +99,7 @@ export const ModalBoxEdit = styled.div`
   }
 
   span {
-    color: #2d2d2d;
+    color: #cd5c5c;
     width: 272px;
     height: 10px;
     font-style: normal;

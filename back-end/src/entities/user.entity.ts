@@ -24,7 +24,10 @@ export class User {
   @Column("date")
   createdAt: string;
 
-  @OneToMany(() => Contact, (contact) => contact.user, { eager: true })
+  @OneToMany(() => Contact, (contact) => contact.user, {
+    eager: true,
+    onDelete: "CASCADE",
+  })
   @JoinColumn()
   contacts: Contact[];
 

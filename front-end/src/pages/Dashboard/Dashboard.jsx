@@ -1,14 +1,13 @@
-import { useState } from "react";
 import { DashboardStyle } from "./style";
 import StartPage from "../StartPage";
 import AddUserModal from "../../components/AddUserModal";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../context";
 
 const Dashboard = () => {
-  const [inApp, setInApp] = useState(false);
-  const [addUserModal, setAddUserModal] = useState(false);
+  const { inApp, addUserModal, setAddUserModal, navigate, loadUsers } =
+    useContext(UserContext);
 
-  const navigate = useNavigate();
   return (
     <>
       {inApp ? (
@@ -21,7 +20,8 @@ const Dashboard = () => {
             Create User
           </button>
           <button
-            onClick={() => {
+            onClick={async () => {
+              await loadUsers();
               navigate("/users");
             }}
           >
@@ -30,10 +30,10 @@ const Dashboard = () => {
         </DashboardStyle>
       ) : (
         <>
-          <StartPage setInApp={setInApp} />
+          <StartPage />
         </>
       )}
-      {addUserModal && <AddUserModal setAddUserModal={setAddUserModal} />}
+      {addUserModal && <AddUserModal />}
     </>
   );
 };

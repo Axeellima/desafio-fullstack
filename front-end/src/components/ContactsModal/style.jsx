@@ -1,41 +1,57 @@
 import styled from "styled-components";
 
-export const DivListUsers = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #000000ee;
+export const ModalContainer = styled.div`
+  position: fixed;
 
-  .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  @media (max-width: 450px) {
+    background-color: #2d2d2d;
+  }
+`;
+
+export const ModalBoxEdit = styled.div`
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #ffff;
+
+  background: #2d2d2d;
+  box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+
+  .modal-content {
     background-color: #2d2d2d;
     padding: 20px 20px;
     border-radius: 3px;
   }
-  .title {
+  .modal-title {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  .title h1 {
+  .modal-title h1 {
     color: #ffff;
     text-transform: uppercase;
   }
-  .list-content {
+  .modal-list-content {
     list-style: none;
     width: 700px;
-    background-color: #f8f8ff;
     padding: 10px 5px;
     border-radius: 3px;
   }
-  .list-info {
+  .modal-list-info {
     font-weight: bold;
     font-size: 16px;
     padding: 5px 10px;
     display: flex;
   }
-  .user {
+  .modal-contact {
     font-size: 14px;
     padding: 5px 10px;
     display: flex;
@@ -44,26 +60,17 @@ export const DivListUsers = styled.div`
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  .name {
-    width: 15%;
+  .modal-name {
+    width: 20%;
   }
-  .mail {
+  .modal-mail {
     width: 30%;
   }
-  .phone {
-    width: 25%;
+  .modal-phone {
+    width: 30%;
   }
-  .contacts {
-    width: 15%;
-  }
-  .contacts-icons {
-    display: flex;
-    position: relative;
-    left: 5px;
-    gap: 5px;
-  }
-  .action {
-    width: 15%;
+  .modal-action {
+    width: 20%;
   }
   .action-icons {
     position: relative;
@@ -102,67 +109,52 @@ export const DivListUsers = styled.div`
   .list-icon:hover {
     cursor: pointer;
   }
-  .back-button {
+  .modal-close {
     margin-top: -20px;
     border-style: none;
     background: transparent;
     font-size: 22px;
     color: #b22222;
     position: relative;
-    left: 335px;
-    bottom: 7px;
+    left: 330px;
+    top: 25px;
     font-weight: bold;
   }
   @media (max-width: 900px) {
-    .list-content {
+    .modal-list-content {
       width: 400px;
     }
-    .mail {
+    .modal-mail {
       display: none;
     }
-    .name {
+    .modal-name {
+      width: 35%;
+    }
+    .modal-phone {
+      width: 35%;
+    }
+    .modal-action {
       width: 20%;
     }
-    .phone {
-      width: 30%;
-    }
-    .contacts {
-      width: 25%;
-    }
-    .action {
-      width: 25%;
-    }
-    .back-button {
-      left: 188px;
+    .modal-close {
+      left: 190px;
     }
   }
   @media (max-width: 450px) {
     background-color: #2d2d2d;
-    .content {
+    .modal-content {
       width: 100vw;
       padding: 0;
     }
-    .list-content {
-      width: 100%;
+    .modal-list-content {
+      width: 100vw;
       padding: 0;
     }
-    .mail {
+    .modal-mail {
       display: none;
     }
-    .name {
-      width: 20%;
-    }
-    .phone {
-      width: 30%;
-    }
-    .contacts {
-      width: 25%;
-    }
-    .action {
-      width: 25%;
-    }
-    .back-button {
-      left: 110px;
+    .modal-close {
+      left: 150px;
     }
   }
 `;

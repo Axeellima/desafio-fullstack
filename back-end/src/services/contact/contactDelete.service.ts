@@ -14,7 +14,7 @@ const contactDeleteService = async (id: string, res: Response) => {
   if (!user) {
     throw new AppError(404, "User not found");
   }
-  contactRepository.delete(user);
+  contactRepository.delete({ id });
   return;
 };
 export default contactDeleteService;

@@ -6,7 +6,10 @@ import { AppError } from "./errors/appError";
 import { userRoutes } from "./routes/user.routes";
 import { contactRoutes } from "./routes/contact.routes";
 
+var cors = require("cors");
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use("/users", userRoutes);
 app.use("/users/contacts", contactRoutes);

@@ -14,4 +14,30 @@ export class Toast {
     });
     return;
   }
+  static sucess() {
+    toast.success("Completed successfully!", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+    return;
+  }
+  static fail() {
+    toast.error("Something wrong! Try again later", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+    return;
+  }
 }
