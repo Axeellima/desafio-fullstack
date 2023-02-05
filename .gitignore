@@ -1,0 +1,5 @@
+node_modules/
+back-end/dist
+back-end/yarn.lock
+back-end/.env
+back-end/dist
