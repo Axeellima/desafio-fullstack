@@ -1,20 +1,42 @@
-Aplicação para DESAFIO FULL STACK - Kenzie Academy Brasil
+# Desafio Full Stack Kenzie Academy Brasil 🚀🔧
 
-Como não foi solicitado na entrega de fato o deploy da aplicação, seu funcionamento está sendo feito localmente... Dessa forma se torna necessário algumas pré-configurações para o teste da aplicação que estarão por aqui descritos
+Bem-vindo ao repositório do meu desafio full stack durante meu curso na Kenzie Academy Brasil! Este projeto é uma aplicação que inclui um CRUD de usuários e contatos.
 
-1° Passo - Dentro da pasta do "/back-end" está a aplicação do CRUD de usuário e contato, sendo assim necessário instalar as dependências da mesma utilizando
-"npm install", da mesma forma com a aplicação de front-end na pasta "/front-end".
+**Importante:** Como o deploy não foi solicitado na entrega, a aplicação está operando localmente. Algumas configurações prévias são necessárias para testar a aplicação.
 
-2° Passo - Configuração de arquivo ".env" as siglas estão explicitas para melhor entendimento do próprio arquivo. Obs: É necessário criar ou ter uma database POSTGRESQL para poder popular a mesma com as entidades da aplicação
+## Configuração Local 🛠️
 
-3° Passo - Executar as migrações para gerar as tabelas em nossa database através dos comandos:
+**1° Passo:** Instale as dependências do back-end e do front-end:
 
-- yarn typeorm migration:create src/migrations/initialMigration
-- yarn typeorm migration:generate src/migrations/generateTables -d src/data-source.ts
-- yarn typeorm migration:run -d src/data-source.ts
+- Dentro da pasta `/back-end`: `npm install`
+- Dentro da pasta `/front-end`: `npm install`
 
-4° Passo - Iniciar o servidor da aplicação back-end utilizando o comando "yarn dev"
+**2° Passo:** Configure o arquivo `.env`:
 
-5° Passo - Iniciar o servidor da aplicação front-end utilizando o comando "npm start" ou "yarn start"
+- Siga as instruções no arquivo `.env` para configurar corretamente as variáveis. Certifique-se de ter uma base de dados PostgreSQL para popular com as entidades da aplicação.
 
-Após isso a aplicação está pronta para uso! Espero que tenha gostado da aplicação desde já agradeço a atenção
+**3° Passo:** Execute as migrações para gerar tabelas na base de dados:
+
+```bash
+yarn typeorm migration:create src/migrations/initialMigration
+yarn typeorm migration:generate src/migrations/generateTables -d src/data-source.ts
+yarn typeorm migration:run -d src/data-source.ts
+```
+
+**4° Passo:** Inicie o servidor do back-end:
+
+```bash
+yarn dev
+```
+
+**5° Passo:** Inicie o servidor do front-end:
+
+```bash
+npm start
+# ou
+yarn start
+```
+
+A aplicação foi desenvolvida no front-end usando React, Context API e Styled-components. O back-end foi construído com Node.js, Express, TypeORM e PostgreSQL.
+
+Aproveite explorar e testar a aplicação localmente! Sinta-se à vontade para fazer contribuições ou fornecer feedback. Vamos construir algo incrível juntos! 🚀😊
